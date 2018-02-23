@@ -5,7 +5,6 @@ import scala.collection.mutable
 
 object SelectionSort extends App {
 
-  // 動く、動くが Int.Max or Int.Min を投げれば壊れる
   def sort(list: mutable.MutableList[Int]): mutable.MutableList[Int] = {
 
     // 現在の最小値を探す
