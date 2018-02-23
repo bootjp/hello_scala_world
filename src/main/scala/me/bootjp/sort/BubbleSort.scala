@@ -26,7 +26,7 @@ object BubbleSort extends App {
     list
   }
 
-  val sortedList = sort(mutable.MutableList(5, 2, 4, 3, 1))
+  val sortedList = sort(mutable.MutableList(5, 2, 4, 3, -1, 1))
 
   sortedList.foreach(println)
 }
