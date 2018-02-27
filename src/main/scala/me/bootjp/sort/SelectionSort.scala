@@ -26,7 +26,6 @@ object SelectionSort extends App {
       }
       fixed += 1
     }
-
     list
   }
 
@@ -36,7 +35,6 @@ object SelectionSort extends App {
     list(source) = tmp
     list
   }
-
 
   /**
     * 線形探索で最小値を探す
@@ -56,14 +54,12 @@ object SelectionSort extends App {
         minNum = elem
         position = index
       }
-      index = index + 1
+      index += 1
     }
 
     position
   }
-
   val sortedList = sort(mutable.MutableList(5, -1, 1))
-
   sortedList.foreach(println)
 }
 
