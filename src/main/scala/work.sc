@@ -1,3 +1,11 @@
-def square(x: Int) = x * x
+import scala.collection.mutable
 
-square(2)
+def aa (num :Int): Int = {
+  return num.hashCode()
+}
+aa(2)
+
+def bb (num :Int): Int = {
+  return num.hashCode()
+}
+bb(2)
