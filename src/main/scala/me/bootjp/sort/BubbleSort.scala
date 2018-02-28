@@ -3,7 +3,7 @@ package me.bootjp.sort
 import scala.collection.mutable
 
 
-object BubbleSort extends App {
+object BubbleSort extends App with SortInterface {
 
   def sort(list: mutable.MutableList[Int]): mutable.MutableList[Int] = {
 
