@@ -15,18 +15,19 @@ object SelectionSort extends App with SortInterface {
     // 現在の最小値
     var min = Long.MinValue
     val end = list.length - 1
+    var outout = list.clone()
     // 何個目が確定したか
     var fixed = 0
     while (fixed != end) {
-      val pos = indexOfMin(list, min)
-      min = list(pos)
+      val pos = indexOfMin(outout, min)
+      min = outout(pos)
       // 見つかった数値がソート済みか未ソートの一番左だった場合はなにもしない
       if (pos > fixed) {
-        swap(list, fixed, pos)
+        outout = swap(outout, fixed, pos)
       }
       fixed += 1
     }
-    list
+    outout
   }
 
   def swap(list: mutable.MutableList[Int], target:Int, source : Int): mutable.MutableList[Int] = {
