@@ -3,7 +3,7 @@ package me.bootjp.sort
 import scala.collection.mutable
 
 
-object BubbleSort extends App with SortTrait {
+object BubbleSort extends SortTrait {
 
   def sort(list: mutable.MutableList[Int]): mutable.MutableList[Int] = {
 
@@ -25,9 +25,5 @@ object BubbleSort extends App with SortTrait {
     }
     list
   }
-
-  val sortedList = sort(mutable.MutableList(5, 2, 4, 3, -1, 1))
-
-  sortedList.foreach(println)
 }
 

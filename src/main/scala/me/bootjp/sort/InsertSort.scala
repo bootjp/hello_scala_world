@@ -2,7 +2,7 @@ package me.bootjp.sort
 
 import scala.collection.mutable
 
-object InsertSort extends App with SortTrait {
+object InsertSort extends SortTrait {
   override def sort(list: mutable.MutableList[Int]) : mutable.MutableList[Int] = {
     // 一番左を操作済みにする
     // まだ操作していないものの中で左のものを取り出し
@@ -38,7 +38,4 @@ object InsertSort extends App with SortTrait {
 
     output
   }
-
-  val sortedList = sort(mutable.MutableList(5, -1, 1, 4))
-  sortedList.foreach(println)
 }

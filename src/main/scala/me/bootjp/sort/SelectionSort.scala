@@ -3,7 +3,7 @@ package me.bootjp.sort
 import scala.collection.mutable
 
 
-object SelectionSort extends App with SortTrait {
+object SelectionSort extends SortTrait {
 
   def sort(list: mutable.MutableList[Int]): mutable.MutableList[Int] = {
 
@@ -53,7 +53,5 @@ object SelectionSort extends App with SortTrait {
 
     position
   }
-  val sortedList = sort(mutable.MutableList(5, -1, 1))
-  sortedList.foreach(println)
 }
 
