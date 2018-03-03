@@ -2,8 +2,6 @@ package me.bootjp.sort
 
 import org.scalatest.FunSuite
 
-import scala.collection.mutable
-
 class SelectionSortAsArrayTest extends FunSuite {
   test("SelectionSort.sort_negative_value") {
     val expected = Array(5, 2, 4, 3, -1, 1).sorted
