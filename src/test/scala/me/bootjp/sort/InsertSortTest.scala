@@ -27,18 +27,17 @@ class InsertSortTest extends FunSuite {
     assert(output == expected)
   }
 
-  // TODO
-//  test("InsertSort.sort_duplicate") {
-//    val expected = mutable.MutableList(5, 2, 2, 3, Int.MinValue).sorted
-//    val output = InsertSort.sort(mutable.MutableList(5, 2, 2, 3, Int.MinValue))
-//
-//    assert(output == expected)
-//  }
-//
-//  test("InsertSort.sort_duplicate_negative") {
-//    val expected = mutable.MutableList(5, 2, 2, 3, Int.MinValue).sorted
-//    val output = InsertSort.sort(mutable.MutableList(5, -2, -2, 3, Int.MinValue))
-//
-//    assert(output == expected)
-//  }
+  test("InsertSort.sort_duplicate") {
+    val expected = mutable.MutableList(5, 2, 2, 3, Int.MinValue).sorted
+    val output = InsertSort.sort(mutable.MutableList(5, 2, 2, 3, Int.MinValue))
+
+    assert(output == expected)
+  }
+
+  test("InsertSort.sort_duplicate_negative") {
+    val expected = mutable.MutableList(5, -2, -2, 3, Int.MinValue).sorted
+    val output = InsertSort.sort(mutable.MutableList(5, -2, -2, 3, Int.MinValue))
+
+    assert(output == expected)
+  }
 }

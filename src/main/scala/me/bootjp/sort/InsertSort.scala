@@ -12,7 +12,6 @@ object InsertSort extends SortTrait {
     // else if 数字が左側に到達 = fixed = ALL?
 
     val end = list.length - 1
-    var output = list.clone()
     var operated = 0
     while (operated != end) {
       // 左を操作済みにする
@@ -22,20 +21,23 @@ object InsertSort extends SortTrait {
       var target = operated
 
       // 未操作のもの中で一番左を取り出す
-      var current = output(target)
-      var next = output(target - 1)
+      var current = list(target)
+      var next = list(target - 1)
 
       // 操作済みの中で数値を比較し、左(Next)の方が大きい場合入れ替えを行う
 
       while (next > current) {
-        output = swap(output, target - 1, target)
+        // swap of array
+        val tmp = list(target - 1)
+        list(target - 1) = list(target)
+        list(target) = tmp
         target -= 1
-        current = output(target)
-        next = output(target - 1)
+        current = list(target)
+        next = list(target - 1)
       }
       // 操作済みListの中で入れ替えをする　
     }
 
-    output
+    list
   }
 }
